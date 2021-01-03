@@ -4,6 +4,7 @@ date: 2021-01-03 09:45:47 +07:00
 modified: 2021-01-03 23:35:47 +07:00
 tags: [write-up]
 description: IDOR at Filkom Apps!
+comments: true
 ---
 
 # Introduction - IDOR
@@ -84,14 +85,14 @@ Then I observed the process that occurs between the two things above by using th
 <figcaption>Fig 10. Developer Tools.</figcaption>
 </figure>
 
-It turns out the browser will make a request to the URL <a href="https://filkom.ub.ac.id/apps" target="_blank" rel="noopener">https://DEPRECATED/BYR_18515020011101720190201.pdf</a> and displays the contents of the page via pop-up page.
+It turns out the browser will make a request to the URL <a href="https://filkom.ub.ac.id/apps" target="_blank" rel="noopener">https://REDACTED/BYR_18515020011101720190201.pdf</a> and displays the contents of the page via pop-up page.
 
 <figure>
 <img src="Picture10.png" alt="pop-up page">
 <figcaption>Fig 11. Pop-up page.</figcaption>
 </figure>
 
-If we follow the URL, we can see that the NIM number is being used again in the URL which allows us to do another IDOR! I changed the NIM number in the url and the payload results are <a href="https://filkom.ub.ac.id/apps" target="_blank" rel="noopener">https://DEPRECATED/BYR_18515020011101820190201.pdf</a>. And it worked! We can see other student's Proof of Payment file!
+If we follow the URL, we can see that the NIM number is being used again in the URL which allows us to do another IDOR! I changed the NIM number in the url and the payload results are <a href="https://filkom.ub.ac.id/apps" target="_blank" rel="noopener">https://REDACTED/BYR_18515020011101820190201.pdf</a>. And it worked! We can see other student's Proof of Payment file!
 
 <figure>
 <img src="Picture11.png" alt="pop-up page">
