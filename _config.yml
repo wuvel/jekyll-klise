@@ -1,8 +1,7 @@
 # Site settings
-title: Wuvel # site title
+title: wuvel # site title
 description: >- # site description
-  He's writing in Bahasa about web technology and experience as a journal 
-  for documentation things that he learned, meet him <a href="https://github.com/wuvel" target="_blank" rel="noopener">@github</a>.
+  He's writing in Bahasa and English about web technology and experience as a security things he learned, meet him <a href="https://github.com/wuvel" target="_blank" rel="noopener">@github</a>.
 lang: en-US # default lang
 timezone: Asia/Jakarta # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
@@ -11,10 +10,9 @@ mode: light # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: Wuvel # author name
+  name: Muhammad Fikri Ashari # author name
   bio: >- # tell to the world
-    The minimalist Jekyll theme, light and dark mode support, for running a personal site and blog, 
-    meet Klisé theme at <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">@github</a>.
+    Welcome to my personal blog site.
   username: wuvel # general username
   github: wuvel # github username
   twitter: wuvelatte # twitter username
