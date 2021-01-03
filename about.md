@@ -2,7 +2,7 @@
 title: Muhammad Fikri Ashari aka wuvel
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt: Hello peeps, I'm student of computer science from Brawijaya University, living in BEkasi. This blog for documentation about my security journey, running on jekyll, hosting on netlify and using the Klisi theme.
 comments: false
 ---
 
