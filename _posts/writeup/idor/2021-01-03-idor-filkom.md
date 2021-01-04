@@ -1,6 +1,6 @@
 ---
 title: Insecure Direct Object Reference (IDOR) at Filkom Apps
-date: 2021-01-03 09:45:47 +07:00
+date: 2021-01-03 12:45:47 +07:00
 tags: [write-up]
 description: IDOR at Filkom Apps!
 comments: true
@@ -35,7 +35,7 @@ Then if I press the highlighted button, i got directed to the print page with my
 <figcaption>Fig 3. Print pre-KRS page.</figcaption>
 </figure>
 
-I tried to enter another NIM number (besides my NIM) in the URL and run it in the browser. Here I will use the "185150200111018" NIM. Turn out I can access other student's short semester pre-KRS data! It displays the student's GPA too!
+I tried to enter another NIM number (besides my NIM) in the URL and run it in the browser. Here I will use the ***"xxxx1018"*** NIM. Turn out I can access other student's short semester pre-KRS data! It displays the student's GPA too!
 
 <figure>
 <a href="Picture3.png"><img src="Picture3.png" /></a>
@@ -49,16 +49,16 @@ Secondly, I encountered another IDOR vulnerability at the "Cetak Kuitansi" menu.
 <figcaption>Fig 5. "Cetak Kuitansi" menu.</figcaption>
 </figure>
 
-If I press the "Cetak Kuitansi" button, i got redirected to the print receipt page .
+If I press the "Cetak Kuitansi" button, i got redirected to the print receipt page.
 
 <figure>
 <a href="Picture5.png"><img src="Picture5.png" /></a>
 <figcaption>Fig 6. Print receipt page.</figcaption>
 </figure>
 
-On that page there is a short semester application program form along with the shor semester study plan card. The information shown below are student's NIM, name, study program, GPA of the previous semster, etc. and we can also see additional information in such a phone number and email.
+On that page there is a short semester application program form along with the short semester study plan card. The information shown above are student's NIM, name, study program, GPA of the previous semster, etc. and we can also see additional information in such a phone number and email.
 
-Immediately, I changed my NIM to someone else's NIM. Here, I will use the previous NIM "185150200111018". Again, I can access someone else's short semeser receipt through this IDOR vulnerability!
+Immediately, I changed my NIM to someone else's NIM. Here, I will use the previous NIM, "***xxxx1018"***. Again, I can access someone else's short semeser receipt through this IDOR vulnerability!
 
 <figure>
 <a href="Picture6.png"><img src="Picture6.png" /></a>
@@ -86,14 +86,22 @@ Then I observed the process that occurs between the two things above by using th
 <figcaption>Fig 10. Developer Tools.</figcaption>
 </figure>
 
-It turns out the browser will make a request to the URL <a href="https://filkom.ub.ac.id/apps" target="_blank" rel="noopener">https://REDACTED/BYR_18515020011101720190201.pdf</a> and displays the contents of the page via pop-up page.
+It turns out the browser will make a request to the URL below.
+```
+https://REDACTED/BYR_xxxx1017xxxx.pdf
+``` 
+It displays the contents of the page via pop-up page. If we follow the URL, we can see that the NIM number is being used again in the URL which allows us to do another IDOR!
 
 <figure>
 <a href="Picture10.png"><img src="Picture10.png" /></a>
 <figcaption>Fig 11. Pop-up page.</figcaption>
 </figure>
 
-If we follow the URL, we can see that the NIM number is being used again in the URL which allows us to do another IDOR! I changed the NIM number in the url and the payload results are <a href="https://filkom.ub.ac.id/apps" target="_blank" rel="noopener">https://REDACTED/BYR_18515020011101820190201.pdf</a>. And it worked! We can see other student's Proof of Payment file!
+I changed the NIM number in the url and the payload results to below code.
+```
+https://REDACTED/BYR_xxxx1018xxxx.pdf
+```
+And it worked! We can see other student's Proof of Payment file!
 
 <figure>
 <a href="Picture11.png"><img src="Picture11.png" /></a>
