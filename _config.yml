@@ -4,7 +4,7 @@ description: >- # site description
   He's writing in Bahasa and English about web technology and experience as a security things he learned, meet him <a href="https://github.com/wuvel" target="_blank" rel="noopener">@github</a>.
 lang: en-US # default lang
 timezone: Asia/Jakarta # set your timezone
-image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+image:  # This image used for Open Graph more info https://ogp.me/
 repo: https://github.com/wuvel/jekyll-klise # site repo [optional]
 mode: light # default theme "dark" | "light"
 
@@ -21,7 +21,7 @@ author:
   avatar: /assets/img/avatar.jpg # change with your own avatar
 
 # URL settings
-url: "wuvel.net" #
+url: "https://wuvel.net" #
 baseurl:
 permalink: /:title/
 google_analytics: # leave it blank if not wish
