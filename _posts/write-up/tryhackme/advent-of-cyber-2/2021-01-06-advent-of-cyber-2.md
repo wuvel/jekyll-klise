@@ -1,6 +1,6 @@
 ---
 title: TryHackMe Writeup - Advent of Cyber 2
-date: 2021-01-06 22:45:47 +07:00
+date: 2021-01-06 15:45:47 +07:00
 tags: [tryhackme]
 description: Tryhackme write-up
 comments: true
