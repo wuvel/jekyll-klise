@@ -273,6 +273,7 @@ We can learn more about basic bash scripting in this [website](https://devhints.
 ## [Task 13] [Section 6: Miscellaneous]: Important Files and Directories
 ---
 
+Here are the important files and directories:
 - `/etc/passwd` - Stores user information - Often used to see all the users on a system.
 - `/etc/shadow` - Has all the passwords of these users.
 - `/etc/sudoers` - Used to control the sudo permissions of every user on the system.
